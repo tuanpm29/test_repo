@@ -1,0 +1,3 @@
+- $ composer install
+- $ php artisan serve
+- go to http://localhost:8000

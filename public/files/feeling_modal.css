@@ -1,0 +1,42 @@
+/* ------- 意思確認モーダル ------- */
+#branch>h2 {
+    display: block;
+    text-align: center;
+    text-shadow: 0 0 4px #fff;
+    color: #2bb2ff;
+    line-height: 1.4;
+    border-bottom: 0;
+}
+a.branch_btn-A, a.branch_btn-B { 
+    width: 100%; 
+    display:block; 
+    margin:0 auto; 
+    padding: 8px 0; 
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 2px, rgba(255, 255, 255, 0.7) 0px 0px 1px inset;
+    background: #4dc443;
+    background: -webkit-linear-gradient(top, #ffaa06 0%,#ffaa06 50%,#f79e04 50%,#f79e04 100%);
+    background: linear-gradient(to bottom, #ffaa06 0%,#ffaa06 50%,#f79e04 50%,#f79e04 100%);
+    border:1px solid #eb8003; 
+    border-radius: 6px; 
+    color: #fff; 
+    text-decoration: none; 
+    letter-spacing: .08em; 
+    font-size: 20px; 
+    font-weight:bold;
+}
+a.branch_btn-B { 
+    border:1px solid #e0b106;
+    background: #f7c200;
+    background: -webkit-linear-gradient(top, #ffc906 0%,#ffc906 50%,#ecbb04 50%,#ecbb04 100%);
+    background: linear-gradient(to bottom, #ffc906 0%,#ffc906 50%,#ecbb04 50%,#ecbb04 100%);
+}
+.modalBK2 {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    z-index:999; 
+    height:100%; 
+    width:100%;
+    background:#000; 
+    opacity: 0.5;
+}
