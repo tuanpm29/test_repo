@@ -30,7 +30,7 @@
         }
         @media (max-width: 610px) {
             #dialog_content > div.bx-wrapper > div.bx-viewport {
-                min-height: 410px !important;
+                min-height: 500px !important;
                 overflow-y: scroll !important;
             }
         }
