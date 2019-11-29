@@ -32,11 +32,11 @@
             .modalBody {
                 height: 220px !important;
             }
+        }
+        @media (max-width: 610px) {
             img#form_status {
                 width: 100%;
             }
-        }
-        @media (max-width: 610px) {
             #Step1 .row3col, #Step2 .row3col {
                 width: 100%;
             }
@@ -70,6 +70,9 @@
                 width: 100% !important;
                 float: none;
                 margin: 0;
+            }
+            #Step1 .col:nth-child(3n), #Step2 .col:nth-child(3n) {
+                margin-right: 10px !important;
             }
         }
     </style>
