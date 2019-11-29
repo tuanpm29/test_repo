@@ -28,6 +28,17 @@
             max-width: 610px;
             width: 100%;
         }
+        @media (max-width: 610px) {
+            #dialog_content > div.bx-wrapper > div.bx-viewport {
+                min-height: 410px !important;
+                overflow-y: scroll !important;
+            }
+        }
+        @media (max-width: 410px) {
+            #dialog_content > div.bx-wrapper > div.bx-viewport {
+                min-height: 700px !important;
+            }
+        }
         @media (max-width: 440px) {
             .modalBody {
                 height: 220px !important;
@@ -44,10 +55,9 @@
                 width: 134px;
             }
             #dialog_content {
-                height: 700px;
+                height: 800px;
             }
             #dialog_content > div.bx-wrapper > div.bx-viewport {
-                height: 600px !important;
                 overflow-y: scroll;
             }
 
