@@ -48,6 +48,7 @@
             }
             #dialog_content > div.bx-wrapper > div.bx-viewport {
                 height: 600px !important;
+                overflow-y: scroll;
             }
 
             #Step3 .col200 {
