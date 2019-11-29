@@ -8,6 +8,7 @@
     <meta name="keywords" content="介護,介護士,求人,募集,KJA">
     <meta name="description" content="介護士求人なら【カイゴジョブエージェント】!最新の募集情報をいち早くお届け!">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>介護職・介護福祉士専門の求人・転職ならカイゴジョブエージェントに登録</title>
 
     <link rel="stylesheet" type="text/css" href="/css/pc/form/reset.css">
@@ -18,9 +19,62 @@
     <link rel="stylesheet" type="text/css" href="/css/lib/jquery-ui-1.10.3.min.css">
     <link rel="stylesheet" type="text/css" href="/css/pc/form/sp_sec2.css">
     <link rel="stylesheet" type="text/css" href="/css/pc/form/feeling_modal.css">
+    <style>
+        .form {
+            max-width: 610px;
+            width: 100%;
+        }
+        #dialog_form {
+            max-width: 610px;
+            width: 100%;
+        }
+        @media (max-width: 440px) {
+            .modalBody {
+                height: 220px !important;
+            }
+            img#form_status {
+                width: 100%;
+            }
+        }
+        @media (max-width: 610px) {
+            #Step1 .row3col, #Step2 .row3col {
+                width: 100%;
+            }
+            #Step1 .row3col .col, #Step2 .row3col .col {
+                width: 134px;
+            }
+            #dialog_content {
+                height: 700px;
+            }
+            #dialog_content > div.bx-wrapper > div.bx-viewport {
+                height: 600px !important;
+            }
 
+            #Step3 .col200 {
+                width: 100% !important;
+            }
+            #Step3 .itemTitle {
+                float: none;
+            }
+            #Step3 select[name="addr1"] {
+                float: none;
+                width: 100%;
+            }
+            #Step3 .col305 {
+                margin: 0 !important;
+            }
+            #Step3 .itemTitle {
+                width: 100% !important;
+            }
+            #Step3 div.col255, #Step4 div.col255, #Step5 div.col255 {
+                width: 100% !important;
+                float: none;
+                margin: 0;
+            }
+        }
+    </style>
 </head>
-<body>
+<body style="min-width: initial">
 <div class="header">
     <div class="header-inner">
         <div class="logo"><img src="/entry/pc/form023/img/logo.png" class="logo-img"></div>
@@ -29,7 +83,7 @@
 <div class="contents">
     <a data-modal="branch" style="display: none;">お気持ちはどちらに近いですか？</a>
     <div class="modal branch">
-        <div class="modalBody" style="height: 180px;width: 500px;">
+        <div class="modalBody" style="height: 180px;max-width: 500px;">
             <div class="scroll_box" id="branch" >
                 <h2>お気持ちはどちらに近いですか？</h2>
                 <a class="close branch_btn-A" onclick="$.setGASide('A');$.sendGA(1, 'STEP1_branch');" style="margin-bottom: 0.7em;">近いうちに転職したい</a>
