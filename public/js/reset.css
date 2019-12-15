@@ -1,0 +1,256 @@
+﻿@charset "utf-8";
+
+/* ブラウザを縮小した際に背景が切れるのを防ぐ */
+
+@media screen{
+body {
+ min-width       : 940px;
+}
+}
+
+/* border */
+fieldset,
+img {
+ border          : 0
+}
+
+/* border-collapse */
+table {
+ border-collapse : collapse
+}
+
+/* border-spacing */
+table {
+ border-spacing  : 0
+}
+
+/* font-family */
+body {
+ font-family     : font-family: Meiryo, "メイリオ", "ＭＳ Ｐゴシック", sans-serif;
+}
+body,
+textarea {
+ font-family     : "Lucida Grande", Meiryo, "メイリオ", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "ＭＳ Ｐゴシック", sans-serif
+}
+
+/* font-size */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+ font-size       : 100%
+}
+
+/* font-style */
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+ font-style      : normal
+}
+
+/* font-weight */
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+th,
+var {
+ font-weight     : normal
+}
+
+/* list-style */
+ol,
+ul {
+ list-style      : none
+}
+
+/* margin */
+blockquote,
+body,
+dd,
+div,
+dl,
+dt,
+fieldset,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+li,
+ol,
+p,
+pre,
+td,
+th,
+ul {
+ margin          : 0
+}
+
+/* padding */
+blockquote,
+body,
+dd,
+div,
+dl,
+dt,
+fieldset,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+li,
+ol,
+p,
+pre,
+td,
+th,
+ul {
+ padding         : 0
+}
+
+/* text-align */
+caption,
+th {
+ text-align      : left
+}
+
+/* ■Web Fonts
+------------------------------------------------------ */
+@font-face {
+	font-family: 'nasu-icon';
+	src:url('/fonts/nasu/nasu_icon_njb.woff') format('woff'),
+		url('/fonts/nasu/nasu_icon_njb.ttf') format('truetype'),
+		url('/fonts/nasu/nasu_icon_njb.svg#nasu-icon') format('svg');
+	font-weight: normal;font-style: normal;
+}
+/* 通常はこのクラスを使用 */
+.wf:before, .btn:before, .wf:after, .btn:after, 
+a.wf:before, a.btn:before, a.wf:after, a.btn:after, 
+.wf a:before, .btn a:before, .wf a:after, .btn a:after,
+/*.wf li:before,.wf li:after,*/
+/* 固定で使用 */ 
+.list_nav li a:after {
+font-family: nasu-icon;speak: none;line-height: 1;-webkit-font-smoothing: antialiased;
+font-weight: normal;margin-right:3px;vertical-align: -1px;
+}
+/* ■共通Web Fonts */
+/* Icons */
+.icon_alert:before { content: "\f600"; }
+.icon_ambulance:before { content: "\f601"; }
+/*.icon_android:before { content: "\f602"; }*/
+.icon_answer:before { content: "\f603"; }
+.icon_arrow:before { content: "\f604"; }
+.icon_arrow_down:before { content: "\f605"; }
+.icon_arrow_left:before { content: "\f606"; }
+.icon_arrow_top:before { content: "\f607"; }
+.icon_arrow_top_down:before { content: "\f608"; }
+.icon_arrow_top_left:before { content: "\f609"; }
+.icon_arrow_top_right:before { content: "\f60a"; }
+.icon_arrow_up:before { content: "\f60b"; }
+.icon_bag:before { content: "\f60c"; }
+/*.icon_birthday:before { content: "\f60d"; }*/
+.icon_bookmark:before { content: "\f60e"; }
+.icon_books:before { content: "\f60f"; }
+.icon_bus:before { content: "\f610"; }
+.icon_cafe:before { content: "\f611"; }
+.icon_call:before { content: "\f612"; }
+.icon_camera:before { content: "\f613"; }
+.icon_care:before { content: "\f614"; }
+.icon_career:before { content: "\f615"; }
+.icon_cart:before { content: "\f616"; }
+.icon_chair:before { content: "\f617"; }
+.icon_check:before { content: "\f618"; }
+.icon_checkbox:before { content: "\f619"; }
+.icon_circle:before { content: "\f61a"; }
+.icon_circle-coat:before { content: "\f61b"; }
+.icon_circle-line:before { content: "\f61c"; }
+.icon_clip:before { content: "\f61d"; }
+.icon_clock:before { content: "\f61e"; }
+.icon_clover:before { content: "\f61f"; }
+.icon_comment:before { content: "\f620"; }
+.icon_comment_right:before { content: "\f621"; }
+.icon_connection:before { content: "\f622"; }
+.icon_cross:before { content: "\f623"; }
+.icon_crown:before { content: "\f624"; }
+.icon_envelope:before { content: "\f625"; }
+.icon_eye:before { content: "\f626"; }
+.icon_gear:before { content: "\f628"; }
+.icon_heart:before { content: "\f629"; }
+.icon_home:before { content: "\f62a"; }
+.icon_hospital:before { content: "\f62b"; }
+.icon_info:before { content: "\f62c"; }
+.icon_key:before { content: "\f62d"; }
+.icon_lamp:before { content: "\f62e"; }
+.icon_leaves:before { content: "\f62f"; }
+.icon_mail:before { content: "\f631"; }
+.icon_mail_check:before { content: "\f632"; }
+.icon_mail_question:before { content: "\f633"; }
+.icon_megaphone:before { content: "\f634"; }
+.icon_money:before { content: "\f635"; }
+.icon_pay:before { content: "\f636"; }
+.icon_pc:before { content: "\f637"; }
+.icon_pen:before { content: "\f638"; }
+/*.icon_person:before { content: "\f639"; }*/
+.icon_phone:before { content: "\f63a"; }
+/*.icon_point:before { content: "\f63b"; }*/
+.icon_question:before { content: "\f63c"; }
+.icon_question_mark:before { content: "\f63d"; }
+/*.icon_sad:before { content: "\f63e"; }*/
+.icon_search:before { content: "\f63f"; }
+/*.icon_share:before { content: "\f640"; }*/
+.icon_menu:before { content: "\f641"; }
+/*.icon_smile:before { content: "\f64e"; }*/
+.icon_square_coat:before { content: "\f64f"; }
+.icon_square_line:before { content: "\f650"; }
+.icon_stethoscope:before { content: "\f651"; }
+.icon_tag:before { content: "\f652"; }
+.icon_test:before { content: "\f653"; }
+.icon_tray:before { content: "\f654"; }
+.icon_triangle_coat:before { content: "\f655"; }
+.icon_triangle_coat_down:before { content: "\f656"; }
+.icon_triangle_coat_left:before { content: "\f657"; }
+.icon_triangle_coat_right:before { content: "\f658"; }
+.icon_unlock:before { content: "\f65a"; }
+.icon_weak:before { content: "\f65b"; }
+.icon_newspaper:before { content: "\f65c"; }
+.icon_file:before { content: "\f65d"; }
+.icon_circle_coat_question:before { content: "\f65e"; }
+.icon_circle_coat_arrow:before { content: "\f65f"; }
+.icon_mail_open:before { content: "\f660"; }
+.icon_beginner:before { content: "\f661"; }
+.icon_sun:before {	content: "\f664";}
+.icon_moon:before {	content: "\f665";}
+.icon_clock_2:before {	content: "\f666";}
+.icon_clock_1:before {	content: "\f667";}
+.icon_karte:before {	content: "\f668";}
+.icon_map:before {	content: "\f669";}
+.icon_train:before {	content: "\f66a";}
+
+/* 右向き矢印 */
+/*.icon_circle_coat_arrow:before,
+a.icon_circle_coat_arrow:before {vertical-align: -2px;}*/

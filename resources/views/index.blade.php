@@ -2,7 +2,6 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <base href="https://www.kaigoagent.com/" target="_blank">
     <meta name="robots" content="noindex,nofollow">
     <meta charset="utf-8">
     <meta name="keywords" content="介護,介護士,求人,募集,KJA">
@@ -11,14 +10,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>介護職・介護福祉士専門の求人・転職ならカイゴジョブエージェントに登録</title>
 
-    <link rel="stylesheet" type="text/css" href="/css/pc/form/reset.css">
-    <link rel="stylesheet" type="text/css" href="/entry/pc/form023/css/form_pc23.css">
-    <link rel="stylesheet" type="text/css" href="/css/pc/form/suggestEmail_pc1.css">
-    <link rel="stylesheet" type="text/css" href="/css/pc/form/toastr.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/reset.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/form_style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/suggestEmail_pc1.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/toastr.css') }}">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-    <link rel="stylesheet" type="text/css" href="/css/lib/jquery-ui-1.10.3.min.css">
-    <link rel="stylesheet" type="text/css" href="/css/pc/form/sp_sec2.css">
-    <link rel="stylesheet" type="text/css" href="/css/pc/form/feeling_modal.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/jquery-ui-1.10.3.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/sp_style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/feeling_modal.css') }}">
     <style>
         .form {
             max-width: 610px;
@@ -61,7 +60,7 @@
                 overflow-y: scroll;
             }
 
-            #Step3 .col200 {
+            #Step3 .col_3 {
                 width: 100% !important;
             }
             #Step3 .itemTitle {
@@ -71,13 +70,13 @@
                 float: none;
                 width: 100%;
             }
-            #Step3 .col305 {
+            #Step3 .col_1 {
                 margin: 0 !important;
             }
             #Step3 .itemTitle {
                 width: 100% !important;
             }
-            #Step3 div.col255, #Step4 div.col255, #Step5 div.col255 {
+            #Step3 div.col_std, #Step4 div.col_std, #Step5 div.col_std {
                 width: 100% !important;
                 float: none;
                 margin: 0;
@@ -89,11 +88,6 @@
     </style>
 </head>
 <body style="min-width: initial">
-<div class="header">
-    <div class="header-inner">
-        <div class="logo"><img src="/entry/pc/form023/img/logo.png" class="logo-img"></div>
-    </div>
-</div>
 <div class="contents">
     <a data-modal="branch" style="display: none;">お気持ちはどちらに近いですか？</a>
     <div class="modal branch">
@@ -106,17 +100,15 @@
         </div>
         <div class="modalBK2"></div>
     </div>    <div class="form">
-        <h1><img src="/entry/pc/form023/img/title01.png" alt="人気の非公開求人をご紹介！"></h1>
+        <h1><img src="/files/title01.png" alt="人気の非公開求人をご紹介！"></h1>
         <form id="form" name="form1" action="{{ url('/submit') }}" method="post" target="_self" enctype="application/x-www-url-encoded">
-            <input type="hidden" name="t" value="PC_23">
-            <input type="hidden" name="action" id="action" value="kja_pc_gs_2120524">
             {{ csrf_field() }}
             <input type="hidden" name="uid" value="">
             <input type="hidden" name="pattern" value="">
             <div id="dialog_form" class="formContent" data-initialstate="true">
                 <div id="dialog_header" class="formHeader">
                     <div class="row rowTable">
-                        <div class="col last"><img id="form_status" data-page-num="1" src="/entry/pc/form023/img/status/1.png"></div>
+                        <div class="col last"><img id="form_status" data-page-num="1" src="/files/1.png"></div>
                     </div>
                 </div>
                 <div id="dialog_content" style="clear : both;">
@@ -151,7 +143,7 @@
                                             <label for="license_6" class="checkbox">無資格</label>
                                         </div>
                                     </div>
-                                    <div class="error_message errorBox03" id="license_errmsg" ></div>
+                                    <div class="error_message error_tooltip2" id="license_errmsg" ></div>
                                 </div>
                                 <h3 class="formTitle"><span class="required">必須</span><span>ご希望の働き方を選択してください。</span></h3>
                                 <div id="req_emp_types_selection" class="formItem">
@@ -173,7 +165,7 @@
                                             <label for="req_emp_type_14" class="radio">こだわらない</label>
                                         </div>
                                     </div>
-                                    <div class="error_message errorBox" id="req_emp_type_errmsg" ></div>
+                                    <div class="error_message error_tooltip" id="req_emp_type_errmsg" ></div>
                                 </div>
                             </div>
                         </li>
@@ -203,7 +195,7 @@
                                             <label for="req_date_5" class="radio">よい求人があればいつでも</label>
                                         </div>
                                     </div>
-                                    <div class="error_message errorBox" id="req_date_errmsg" ></div>
+                                    <div class="error_message error_tooltip"></div>
                                 </div>
                                 <h3 class="formTitle"><span class="required">必須</span><span>現職務内容を選択してください。</span></h3>
                                 <div id="job_description_selection" class="formItem">
@@ -229,7 +221,7 @@
                                             <label for="job_description_5" class="radio">その他</label>
                                         </div>
                                     </div>
-                                    <div class="error_message errorBox" id="job_description_errmsg" ></div>
+                                    <div class="error_message error_tooltip"></div>
                                 </div>
                             </div>
                         </li>
@@ -238,9 +230,9 @@
                             <div class="partial_form formBody" id="Step3" style="visibility: hidden;">
                                 <h3 class="formTitle"><span>現住所と希望勤務地を入力してください。</span><br><small>※公開されません</small></h3>
                                 <div id="zip_area" class="formItem addr">
-                                    <div class="row offset42">
+                                    <div class="row os1">
                                         <div class="col" style="width: inherit;">
-                                            <input type="text" value="" name="zip" id="zip" style="ime-mode: disabled;" class="width150zip col150" placeholder="例：〒1234567">
+                                            <input type="text" value="" name="zip" id="zip" style="ime-mode: disabled;" class="width150zip col_2" placeholder="例：〒1234567">
                                         </div>
                                         <div class="col btn_area">
                                             <p id="zip2"><small>郵便番号がわからない場合はコチラ</small></p>
@@ -248,8 +240,8 @@
                                     </div>
                                     <p class="addTxt">お住まいを中心に近隣の非公開求人をお届けいたします。</p>
                                     <div class="acoArea">
-                                        <div class="row offset42">
-                                            <div class="col col200">
+                                        <div class="row os1">
+                                            <div class="col col_3">
                                                 <h4 class="itemTitle">都道府県/市区町村<span class="required">必須</span></h4>
                                                 <select name="addr1" id="addr1" class="width180 selectElem" style="ime-mode:active;">
                                                     <option value="">都道府県</option>
@@ -302,7 +294,7 @@
                                                     <option label="沖縄県" value="88" >沖縄県</option>
                                                 </select>
                                             </div>
-                                            <div class="col col305">
+                                            <div class="col col_1">
                                                 <select name="addr2" id="addr2" class="width180 selectElem">
                                                     <option value="">市区町村</option>
                                                     <option label="千代田区" value="26001" >千代田区</option>
@@ -371,24 +363,24 @@
                                                 <input type="hidden" id="form_addr2" value="">
                                             </div>
                                         </div>
-                                        <div id="addr1or2_error_msgs" class="errorBox">
+                                        <div id="address12_error" class="error_tooltip">
                                             <ul>
-                                                <li id="addr1or2_errmsg0" class="error_message err_pos02"></li>
-                                                <li id="addr1or2_errmsg1" class="error_message err_pos02"></li>
+                                                <li id="addr1or2_errmsg0" class="error_message error_position1"></li>
+                                                <li id="addr1or2_errmsg1" class="error_message error_position1"></li>
                                             </ul>
                                         </div>
                                         <div class="formItem box_pos">
                                             <h4 class="itemTitle">番地以下<span class="required">必須</span></h4>
-                                            <div class="col255">
+                                            <div class="col_std">
                                                 <input type="text" name="addr3" value="" id="addr3" class="width175" style="ime-mode: active;" placeholder="例：1-2-3　AAマンション101">
-                                                <div id="addr3_errmsg" class="error_message errorBox" ></div>
+                                                <div id="address3_error" class="error_message error_tooltip" ></div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="formItem box_pos">
                                     <h4 class="itemTitle">希望勤務地<small>(第一希望)</small><span class="required">必須</span></h4>
-                                    <div class="col255">
+                                    <div class="col_std">
                                         <select name="req1_addr1" id="req1_addr1">
                                             <option label="" value="">選択してください</option>
                                             <option label="北海道" value="11" >北海道</option>
@@ -439,7 +431,7 @@
                                             <option label="鹿児島県" value="87" >鹿児島県</option>
                                             <option label="沖縄県" value="88" >沖縄県</option>
                                         </select>
-                                        <div class="error_message errorBox" id="req1_addr1_errmsg" ></div>
+                                        <div class="error_message error_tooltip" id="r1a1_error" ></div>
                                     </div>
                                 </div>
                             </div>
@@ -451,23 +443,23 @@
 
                                 <div class="formItem">
                                     <h4 class="itemTitle">お名前<span class="required">必須</span></h4>
-                                    <div class="col255">
+                                    <div class="col_std">
                                         <input type="text" size="20" name="name_kan" id="name_kan" value="" placeholder="例：看護花子">
                                     </div>
-                                    <div class="error_message errorBox02" id="name_kan_errmsg" ></div>
+                                    <div class="error_message error_tip1" id="name_kan_errmsg" ></div>
                                 </div>
 
                                 <div class="formItem">
                                     <h4 class="itemTitle">ふりがな<span class="required">必須</span></h4>
-                                    <div class="col255">
+                                    <div class="col_std">
                                         <input type="text" size="20" name="name_cana" id="name_cana" value="" placeholder="例：かんごはなこ">
                                     </div>
-                                    <div class="error_message errorBox02" id="name_cana_errmsg" ></div>
+                                    <div class="error_message error_tip1" id="name_cana_errmsg" ></div>
                                 </div>
 
                                 <div id="" class="formItem">
                                     <h4 class="itemTitle">生まれ年<span class="required">必須</span></h4>
-                                    <div class="col255">
+                                    <div class="col_std">
                                         <select id="birth_year" name="birth_year" class="width180 selectElem">
                                             <option value="" selected="selected">選択してください</option>
                                             <option label="2001/平成13" value="2001" >2001/平成13</option>
@@ -535,7 +527,7 @@
                                             <option label="1939/昭和14" value="1939" >1939/昭和14</option>
                                         </select>
                                     </div>
-                                    <div class="error_message errorBox02" id="birth_year_errmsg" ></div>
+                                    <div class="error_message error_tip1" id="birth_year_errmsg" ></div>
                                 </div>
                             </div>
                         </li>
@@ -545,7 +537,7 @@
                                 <h3 class="formTitle">退職意向・ご連絡先を入力してください。<br><small>※公開されません</small></h3>
                                 <div class="formItem ">
                                     <h4 class="itemTitle">退職意向<span class="required">必須</span></h4>
-                                    <div class="col255">
+                                    <div class="col_std">
                                         <select name="retirement_intention" id="retirement_intention">
                                             <option label="" value="">選択してください</option>
                                             <option label="離職中／退職確定済" value="1" >離職中／退職確定済</option>
@@ -556,25 +548,25 @@
                                             <option label="あまり辞める気は無い" value="6" >あまり辞める気は無い</option>
                                             <option label="その他" value="7" >その他</option>
                                         </select>
-                                        <div class="error_message errorBox" id="retirement_intention_errmsg" ></div>
+                                        <div class="error_message error_tooltip" id="ri_error" ></div>
                                     </div>
                                 </div>
 
                                 <div class="formItem">
                                     <h4 class="itemTitle">電話番号<span class="required">必須</span></h4>
-                                    <div class="col255">
+                                    <div class="col_std">
                                         <input id="mob_phone" name="mob_phone" type="text" value="" style="ime-mode: disabled;" size="14" placeholder="例：09012345678">
                                     </div>
-                                    <div class="error_message errorBox02 err_pos03" id="mob_phone_errmsg" ></div>
+                                    <div class="error_message error_tip1 err_pos03" id="mob_phone_errmsg" ></div>
                                 </div>
 
                                 <div class="formItem">
                                     <h4 class="itemTitle">メールアドレス<span class="required2">任意</span></h4>
-                                    <div class="col255">
+                                    <div class="col_std">
                                         <input id="mob_mail_inp" name="mob_mail" type="text" size="22" value="" maxlength="80" style="ime-mode: disabled;" placeholder="例：aaa@aaa.ne.jp(任意)">
                                         <div id="suggest" style="display:none;" tabindex="-1"></div>
                                     </div>
-                                    <div class="error_message errorBox02 err_pos03" id="mob_mail_errmsg" ></div>
+                                    <div class="error_message error_tip1 err_pos03" id="mob_mail_errmsg" ></div>
                                 </div>
 
                             </div>
@@ -594,59 +586,28 @@
         </form>
     </div>
 </div>
-<div id="footer">
-    <div class="innerfooter">
-        <small>Copyright &copy; SMS Career CO., LTD. All Rights Reserved.</small>
-        <div class="footLink">
-            <a data-rel="dialog" data-transition="pop" data-modal="tos" id="kiyaku">利用規約</a>
-            <a data-modal="pmark" id="kojin_joho">個人情報の取り扱いについて</a>
-            <a data-modal="access" id="campany">運営会社</a>
-        </div>
-        <div class="modal tos">
-            <div class="modalBody">
-                <div class="scroll_box" id="tos"></div>
-                <p class="close">×close</p>
-            </div>
-            <div class="modalBK"></div>
-        </div>
-        <div class="modal pmark">
-            <div class="modalBody">
-                <div class="scroll_box" id="pmark"></div>
-                <p class="close">×close</p>
-            </div>
-            <div class="modalBK"></div>
-        </div>
-        <div class="modal access">
-            <div class="modalBody">
-                <div class="scroll_box" id="access"></div>
-                <p class="close">×close</p>
-            </div>
-            <div class="modalBK"></div>
-        </div>
-    </div>
-</div>
 
-<script type="text/javascript" src="/js/jquery-1.11.1.min.js?20180307"></script>
-<script type="text/javascript" src="/js/pc/form/jquery.leanModal.min_for_form1.js?20180307"></script>
-<script type="text/javascript" src="/js/lib/jquery.easing.1.3.js?20180307"></script>
-<script type="text/javascript" src="/js/lib/jquery.bxslider.4.2.12.js?20180307"></script>
-<script type="text/javascript" src="/js/lib/jquery-ui-1.10.3.min.js?20180307"></script>
-<script type="text/javascript" src="/js/common/form/jquery.autoKana.js?20180307"></script>
+<script type="text/javascript" src="{{ asset('js/jquery-1.11.1.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/jquery.leanModal.min_for_form1.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/jquery.easing.1.3.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/jquery.bxslider.4.2.12.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/jquery-ui-1.10.3.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/jquery.autoKana.js') }}"></script>
 
-<script type="text/javascript" src="/js/common/SearchCity/jquery.SearchCityAutocomplete.js?20180307"></script>
-<script type="text/javascript" src="/js/common/form/njb_common_jquery.js?20180307"></script>
+<script type="text/javascript" src="{{ asset('js/jquery.SearchCityAutocomplete.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/njb_common_jquery.js') }}"></script>
 <script type="text/javascript" src="{{ asset('/files/checkMail.js') }}"></script>
 
-<script type="text/javascript" src="/js/lib/jquery.inview.min.js?20180307"></script>
-<script type="text/javascript" src="/js/common/form/ga_form.js?20191111"></script>
-<script type="text/javascript" src="/entry/pc/form023/js/jquery.validate_multiStepForm_for_pc23.js?20180307"></script>
-<script type="text/javascript" src="/entry/pc/form023/js/pc23.js?20191118"></script>
-<script type="text/javascript" src="/entry/pc/form023/js/jq.bxslider_callback_pc23.js?20180307"></script>
+<script type="text/javascript" src="{{ asset('js/jquery.inview.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/ga_form.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/jquery.validate_form.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/js_form.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/jq.bxslider_callback_js_form.js?20180307') }}"></script>
 
-<script type="text/javascript" src="/js/common/form/toastr.min.js?20180307"></script>
-<script type="text/javascript" src="/js/common/form/placeholder.js?20180307"></script>
-<script type="text/javascript" src="/js/lib/suggest_2.3.js?20180307"></script>
-<script type="text/javascript" src="/js/common/form/suggestEmail.js?20180307"></script>
+<script type="text/javascript" src="{{ asset('js/toastr.min.js?20180307') }}"></script>
+<script type="text/javascript" src="{{ asset('js/placeholder.js?20180307') }}"></script>
+<script type="text/javascript" src="{{ asset('js/suggest_2.3.js?20180307') }}"></script>
+<script type="text/javascript" src="{{ asset('js/suggestEmail.js?20180307') }}"></script>
 
 <script type="text/javascript">
     $(document).ready(function($) {
@@ -668,23 +629,6 @@
 </script>
 
 <!-- お気持ちはどちらに近いですか モーダル -->
-<script src="/js/pc/form/feeling_modal.js"></script>
-
-<!-- 共通タグ -->
-<!-- Yahoo Tag Manager -->
-<script id="tagjs" type="text/javascript">
-    (function () {
-        var tagjs = document.createElement("script");
-        var s = document.getElementsByTagName("script")[0];
-        tagjs.async = true;
-        tagjs.src = "//s.yjtag.jp/tag.js#site=b5cEgfj&referrer="
-            + encodeURIComponent(document.location.href) + "";
-        s.parentNode.insertBefore(tagjs, s);
-    }());
-</script>
-<noscript>
-    <iframe src="//b.yjtag.jp/iframe?c=b5cEgfj" width="1" height="1" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-</noscript>
-<!-- End Yahoo Tag Manager -->
+<script src="{{ asset('js/feeling_modal.js') }}"></script>
 </body>
 </html>
