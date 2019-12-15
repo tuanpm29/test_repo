@@ -10,7 +10,7 @@ body{
     position: relative;
     width:100%;
     height: 85%;
-    background:#f8f8f8 no-repeat center bottom 66%;
+    background:#f8f8f8 url(/files/background.png) no-repeat center bottom 66%;
     }
 .img.sp-image{
     background-size: contain;
