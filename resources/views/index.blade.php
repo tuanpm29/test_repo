@@ -100,7 +100,7 @@
         </div>
         <div class="modalBK2"></div>
     </div>    <div class="form">
-        <h1><img src="/files/title01.png" alt="人気の非公開求人をご紹介！"></h1>
+        <h1 style="height: 70px;">&nbsp;</h1>
         <form id="form" name="form1" action="{{ url('/submit') }}" method="post" target="_self" enctype="application/x-www-url-encoded">
             {{ csrf_field() }}
             <input type="hidden" name="uid" value="">
