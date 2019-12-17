@@ -38,9 +38,12 @@
                 min-height: 700px !important;
             }
         }
-        @media (max-width: 440px) {
+        @media (max-width: 450px) {
             .modalBody {
                 height: 220px !important;
+            }
+            .nextBtn {
+                width: 200px;
             }
         }
         @media (max-width: 610px) {
